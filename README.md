@@ -1,4 +1,5 @@
 # platzi-rooms
+<<<<<<< HEAD
 
 ## Project setup
 ```
@@ -27,3 +28,6 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+Learning advanced skills of Vuejs
+>>>>>>> 213aa38247f72b196d89a7cc4cecf9c919d111ff
