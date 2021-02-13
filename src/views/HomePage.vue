@@ -2,7 +2,11 @@
   <default-layout>
     <section class="container py-6">
       <h1 class="text-3xl font-light text-grey-darkest mb-3">Recomendados</h1>
+<<<<<<< HEAD
       <div class="section">
+=======
+      <div clas s="section">
+>>>>>>> e5b1a1c3cccfa285d2989cba2b7665713421243e
         <tiny-slider>
           <div class="slider-item">1</div>
           <div class="slider-item">2</div>

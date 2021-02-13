@@ -16,7 +16,11 @@ export default {
           </a>
         </div>
         <div class="modal-content">
+<<<<<<< HEAD
           {this.$slots.default}
+=======
+          {this.$slots.default || this.$slots.signup}
+>>>>>>> e5b1a1c3cccfa285d2989cba2b7665713421243e
         </div>
       </div>
     </div> : null;

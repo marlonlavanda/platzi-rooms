@@ -31,7 +31,11 @@
       <slot></slot>
     </main>
     <footer-partial></footer-partial>
+<<<<<<< HEAD
     <!-- Modals -->
+=======
+    <!-- Modals Login -->
+>>>>>>> e5b1a1c3cccfa285d2989cba2b7665713421243e
     <modal :show="modals.login" @close-modal="closeModal">
       <h2 class="text-grey-darkest font-semibold text-center mb-6">
         Welcome to Platzi Rooms
@@ -40,12 +44,17 @@
         <div class="mb-4">
           <label class="input__label">Email</label>
           <div class="form__field relative">
+<<<<<<< HEAD
             <input v-model="formLogin.email" class="input__field" type="text" placeholder="bruce.wayne@imnotbatman.org">
+=======
+            <input v-model="formLogin.email" class="input__field" type="text" placeholder="username"/>
+>>>>>>> e5b1a1c3cccfa285d2989cba2b7665713421243e
           </div>
         </div>
         <div class="mb-4">
           <label class="input__label">Password</label>
           <div class="form__field relative">
+<<<<<<< HEAD
             <input v-model="formLogin.password" class="input__field" type="password" placeholder="*********">
           </div>
         </div>
@@ -58,6 +67,50 @@
         </div>
       </form>
     </modal>
+=======
+            <input v-model="formLogin.password" class="input__field" type="text" placeholder="******"/>
+          </div>
+        </div>
+        <div>
+          <div class="mb-4">
+            <toogle-input v-model="formLogin.rememberme"></toogle-input>
+            Remember me
+          </div>
+          <button class="btn btn-primary mr-3 w-full">Login</button>
+        </div>
+      </form>
+    </modal>
+
+    <modal :show="modals.signup" @close-modal="closeModalSingUp">
+      <h2 class="text-grey-darkest font-semibold text-center mb-6">
+        Sign up to Platzi Rooms
+      </h2>
+      <form>
+        <div class="mb-4">
+          <label class="input__label">Email</label>
+          <div class="form__field relative">
+            <input class="input__field" type="text" placeholder="username"/>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="input__label">Password</label>
+          <div class="form__field relative">
+            <input class="input__field" type="text" placeholder="******"/>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="input__label">Confirm Password</label>
+          <div class="form__field relative">
+            <input class="input__field" type="text" placeholder="******"/>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-primary mr-3 w-full">Sign up</button>
+        </div>
+      </form>
+    </modal>
+
+>>>>>>> e5b1a1c3cccfa285d2989cba2b7665713421243e
   </div>
 </template>
 
@@ -66,7 +119,11 @@ import { mapGetters } from 'vuex';
 import HeaderPartial from '@/partials/HeaderPartial.vue';
 import FooterPartial from '@/partials/FooterPartial.vue';
 import Modal from '@/components/Modal.vue';
+<<<<<<< HEAD
 import ToggleInput from '@/components/ToggleInput.vue';
+=======
+import ToogleInput from '@/components/ToogleInput.vue';
+>>>>>>> e5b1a1c3cccfa285d2989cba2b7665713421243e
 
 export default {
   name: 'DefaultLayout',
@@ -75,6 +132,7 @@ export default {
       formLogin: {
         email: '',
         password: '',
+<<<<<<< HEAD
         rememberMe: false,
       },
     };
@@ -84,19 +142,44 @@ export default {
       'modals',
     ]),
   },
+=======
+        rememberme: false,
+      },
+    };
+  },
+>>>>>>> e5b1a1c3cccfa285d2989cba2b7665713421243e
   components: {
     HeaderPartial,
     FooterPartial,
     Modal,
+<<<<<<< HEAD
     ToggleInput,
   },
   methods: {
     closeModal () {
+=======
+    ToogleInput,
+  },
+  computed: {
+    ...mapGetters(['modals']),
+  },
+  methods: {
+    closeModal() {
+>>>>>>> e5b1a1c3cccfa285d2989cba2b7665713421243e
       this.$store.dispatch('TOGGLE_MODAL_STATE', {
         name: 'login',
         value: false,
       });
     },
+<<<<<<< HEAD
+=======
+    closeModalSingUp() {
+      this.$store.dispatch('TOGGLE_MODAL_SIGNUP_STATE', {
+        name: 'signup',
+        value: false,
+      });
+    },
+>>>>>>> e5b1a1c3cccfa285d2989cba2b7665713421243e
   },
 };
 </script>
