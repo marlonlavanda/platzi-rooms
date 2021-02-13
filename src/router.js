@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import HomePage from './views/HomePage.vue';
 import SearchPage from './views/SearchPage.vue';
 import NotFoundPage from './views/NotFoundPage.vue';
+import CreateHousePage from './views/CreateHousePage.vue';
 
 // User Pages
 import ProfilePage from './views/user/ProfilePage.vue';
@@ -39,9 +40,19 @@ export default new Router({
       component: HousesPages,
     },
     {
+      path: '/house',
+      redirect: { name: 'ProfilePage' },
+    },
+    {
+      path: '/house/new',
+      name: 'CreateHousePage',
+      component: CreateHousePage,
+    },
+    {
       path: '*',
       name: 'NotFoundPage',
       component: NotFoundPage,
     },
+
   ],
 });
