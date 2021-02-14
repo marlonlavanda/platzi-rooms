@@ -115,7 +115,6 @@ export default {
     ...mapGetters({
       user: 'authUser',
     }),
-    // Getter dinámico usando HOF
     userRoomsCount() {
       return this.$store.getters.userRoomsCount(this.user['.key']);
     },
